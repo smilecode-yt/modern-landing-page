@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.gutter-outside {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.section-intro-mockup {
+  background-color: #000;
+  background-image: linear-gradient(172deg, #000 50%, #af7a50);
+}
+
+.iphone-mockup {
+  z-index: 1;
+  width: 28%;
+  position: relative;
+  overflow: hidden;
+}
+
+.iphone-mockup.is-second {
+  margin-top: 11%;
+  transition: all 0.7s ease-in-out;
+}
+
+.iphone14-screen {
+  width: 90%;
+  height: 95%;
+  object-fit: cover;
+  border-radius: 3%;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  overflow: hidden;
+}
+
+.iphone-shape {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+}
+
+.mockup-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.iphone14-image {
+  width: 100%;
+}
+
+.mockup-title-wrapper {
+  max-width: 50em;
+  color: #ffebb7;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8em;
+  z-index: 999;
+}
+
+.mockup-title {
+  color: #6e3b0e;
+  text-transform: uppercase;
+  background-image: linear-gradient(148deg, #ffd2a9, #ff9500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 6em;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.mockup-subtitle {
+  width: 24em;
+  color: #ffebb7;
+  margin: 1em auto;
+  font-size: 1.4em;
+  line-height: 1.4;
+}
+
+.nav {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  bottom: auto;
+  right: 0;
+  left: 0;
+}
+
+.menu-btn-wrapper {
+  margin-right: 1em;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.menu-btn {
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fff;
+  padding: 1em 1.6em;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: inline-block;
+}
+
+.menu-btn:hover {
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  border-bottom: 1px solid #ffffff88;
+}
+
+@media screen and (min-width: 991px) {
+  /* hover transition work just in big screen */
+  .up-effect {
+    transition: all 0.5s ease-in-out;
+  }
+  .up-effect:hover {
+    margin-top: -18%;
+    transition: all 0.5s ease-in-out;
+    cursor: no-drop;
+  }
+  .iphone-mockup.is-second:hover {
+    margin-top: -18%;
+    opacity: 0.3;
+    cursor: no-drop;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .gutter-outside {
+    /* vw: viewport for width just like vh for height, 1vw=1% screen */
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .mockup-wrapper {
+    height: 100vh;
+    margin-top: 10px;
+  }
+  .mockup-title {
+    font-size: 4em;
+  }
+  .mockup-subtitle {
+    font-size: 1.1em;
+  }
+  .header-inner {
+    padding-top: 2em;
+  }
+
+  .menu-btn:hover {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .iphone-mockup {
+    width: 40%;
+  }
+
+  .iphone-mockup.is-second {
+    width: 52%;
+    order: 1;
+    margin-top: -80vh;
+  }
+
+  .menu {
+    margin-top: 21px;
+  }
+
+  .mockup-title-wrapper {
+    padding-top: 12em;
+    padding-bottom: 8em;
+  }
+  .mockup-wrapper {
+    justify-content: center;
+    height: 100vh;
+    margin-top: 0;
+  }
+
+  .mockup-title {
+    font-size: 3em;
+  }
+
+  .header-inner {
+    justify-content: space-around;
+  }
+}
